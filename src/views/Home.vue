@@ -11,11 +11,11 @@
     <div class="hero-wrapper opacity-90">
       <div class="hero">
         <canvas id="canv" width="32" height="20" />
-        <h1 class="title glitch text-2xl lg:text-5xl 2xl:text-7xl" data-glitch="Morgenshtern - Last One">
+        <h1 class="title glitch text-2xl lg:text-5xl xl:text-7xl" data-glitch="Morgenshtern - Last One">
           Morgenshtern - Last One
         </h1>
       </div>
-      <div class="hero hero-behind flex flex-col pt-[90px] md:pt-[150px]">
+      <div class="hero hero-behind flex flex-col pt-[100px]">
         <span class="md:text-lg desc md:w-[600px]" aria-hidden="true">
           LAST ONE — шестой полноформатный релиз Алишера, написанный после выезда артиста из России. Альбом должен стать
           последним на русском языке релизом, что ранее заявлял сам артист во всех возможных источниках.
@@ -85,6 +85,11 @@ onMounted(() => {
 
 </script>
 
+<style lang="sass">
+.vk
+  @apply xl:fixed xl:w-[400px] xl:h-screen right-[0px] bottom-[0px] opacity-90
+</style>
+
 <style>
 * {
   margin: 0;
@@ -111,9 +116,9 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 40%, 0 100%);
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
   .hero {
-    height: 400px;
+    height: 300px;
     clip-path: polygon(0 0, 100% 0, 100% 25%, 0 100%);
   }
 }
@@ -138,6 +143,7 @@ canvas {
   color: #555;
   opacity: .9;
   margin-top: 20px;
+  font-size: 4vw;
   mix-blend-mode: color-burn;
   font-weight: 900;
 }
